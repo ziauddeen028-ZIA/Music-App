@@ -14,16 +14,24 @@
 
     <div class="container">
         <h1>Music Player</h1>
-        <img src="ziauddeen.jpeg" alt="img" id="image">
+        <div class="songimg">
+            <img src="ziauddeen.jpeg" alt="img" id="image">
+        </div>
         <div class="details">
-            <h3 id="title">title.mp3</h3>
-            <h2 id="artist">Artist name</h2>
-            <input type="range">
+            <h2 id="title">title.mp3</h2>
+            <h3 id="artist">Artist name</h3>
+            <div class="songslider">
+                <input type="range" id="slider" class="seek-bar" min="0" max="100" value="0" onclick="changeDuration()">
+            </div>
+        </div>
+        <div class="timings">
+            <span id="current-time">0:00</span>
+            <span id="song-duration">0:00</span>
         </div>
         <div class="btns">
-            <button id="prev_song"><i class="fa-sharp-duotone fa-solid fa-backward"></i></button>
-            <button id="current_song"><i class="fa-sharp-duotone fa-solid fa-play"></i></button>
-            <button id="next_song"><i class="fa-sharp-duotone fa-solid fa-forward"></i></button>
+            <button id="prev_song" onclick="backSong()"><i class="fa-sharp-duotone fa-solid fa-backward"></i></button>
+            <button id="current_song" onclick="currentSong()"><i class="fa-sharp-duotone fa-solid fa-play"></i></button>
+            <button id="next_song" onclick="nextSong()"><i class="fa-sharp-duotone fa-solid fa-forward"></i></button>
         </div>
 
     </div>
